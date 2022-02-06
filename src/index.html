@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <style>
+        button.single {
+            height: 50px;
+            width: 50px;
+            margin: 0 0 0 0;
+            background-color: rgb(0, 0, 0);
+        }
+
+        button.color-set {
+            height: 50px;
+            width: 50px;
+            margin: 0 0 0 0;
+        }
+
+        div.line {
+            display: flex;
+        }
+
+        #more {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #one-click-color-set {
+            display: flex;
+        }
+
+        #colors-light {
+            display: flex;
+        }
+
+        #colors-light-set {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #colors,
+        #light {
+            flex-direction: column;
+            display: flex;
+        }
+
+        input {
+            width: 50px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+
+<body id="body">
+    <div>
+        <div id="more"></div>
+        <div id="colors-light-set">
+            <div id="one-click-color-set">
+                <button class="color-set" style="background-color: rgb(255, 0, 0);">red</button>
+                <button class="color-set" style="background-color: rgb(0, 255, 0);">green</button>
+                <button class="color-set" style="background-color: rgb(0, 0, 255);">blue</button>
+                <button class="color-set" style="background-color: rgb(255, 255, 0);">red-green</button>
+                <button class="color-set" style="background-color: rgb(255, 0, 255);">red-blue</button>
+                <button class="color-set" style="background-color: rgb(0, 255, 255);">green-blue</button>
+                <button class="color-set" style="background-color: rgb(255, 255, 255);">white</button>
+                <button class="color-set" style="background-color: rgb(0, 0, 0);">black</button>
+            </div>
+
+            <div id="colors-light">
+                <div id="colors">
+                    <span> color: </span>
+                    <input type="text" id="color-r" />
+                    <input type="text" id="color-g" />
+                    <input type="text" id="color-b" />
+                </div>
+                <div id="light">
+                    <span> light: </span>
+                    <input type="text" id="light" />
+                </div>
+                <button id="sub-color">yes</button>
+                <button id="tojson">to json</button>
+                <button id="sendjson">send json</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
